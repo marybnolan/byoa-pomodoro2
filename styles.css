@@ -1,0 +1,140 @@
+:root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --background: #f8fafc;
+    --surface: #ffffff;
+    --text: #1e293b;
+    --text-light: #64748b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text);
+}
+
+.container {
+    background-color: var(--surface);
+    padding: 2.5rem;
+    border-radius: 24px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 420px;
+    transition: transform 0.2s ease;
+}
+
+.container:hover {
+    transform: translateY(-2px);
+}
+
+h1 {
+    color: var(--text);
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+
+.segmented-control {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    background: #f1f5f9;
+    border-radius: 12px;
+    overflow: hidden;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4px;
+}
+
+.segment {
+    background: none;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.segment.active {
+    background: var(--surface);
+    color: var(--primary);
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.segment:not(.active):hover {
+    color: var(--text);
+}
+
+.timer {
+    margin-bottom: 2.5rem;
+}
+
+.time-display {
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -2px;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+button {
+    padding: 0.9rem 1.8rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+}
+
+#start {
+    background-color: var(--success);
+    color: white;
+}
+
+#pause {
+    background-color: var(--warning);
+    color: white;
+}
+
+#reset {
+    background-color: var(--danger);
+    color: white;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+button:active {
+    transform: translateY(0);
+} 
